@@ -1,21 +1,35 @@
-# Guimoo Support Center
+# Guimoo Support Search v4
 
-Central de suporte em HTML/CSS/JS para rodar no GitHub Pages.
+Versão com tela inicial realmente no estilo Google.
 
-## Conteúdo carregado
+## Conceito
 
-- Total de artigos: 771
-- Categorias: 13
+A página inicial fica limpa, com apenas:
 
-## Estrutura
+- guimoo
+- campo de busca central
+- sugestões rápidas
+- botões de pesquisa
+
+O restante fica "atrás". Só aparece quando o usuário seleciona uma mensagem/procedimento.
+
+## Arquivos
 
 ```txt
 index.html
-data/
-  artigos.json
-  categorias.json
+css/style.css
+js/app.js
+data/artigos.json
+data/categorias.json
 ```
 
-## Publicação no GitHub Pages
+## Base
 
-Settings → Pages → Deploy from a branch → main → /root.
+- 771 artigos
+- 13 categorias
+
+## Publicação
+
+Suba todos os arquivos para o GitHub Pages no repositório:
+
+hubconectbr/suporteguimoo
