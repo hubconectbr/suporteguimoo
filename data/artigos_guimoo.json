@@ -1,0 +1,76 @@
+[
+  {
+    "id": "SUP001",
+    "categoria": "WhatsApp",
+    "subcategoria": "Conexão e Instâncias",
+    "titulo": "WhatsApp desconectado ou não envia mensagens",
+    "icone": "🟢",
+    "dificuldade": "Fácil",
+    "tempo": "2 min",
+    "versao": "1.0",
+    "atualizadoEm": "04/07/2026",
+    "tags": ["whatsapp", "qr code", "conexão", "instância", "mensagens", "envio"],
+    "problema": "O cliente informa que o WhatsApp desconectou ou não está enviando mensagens.",
+    "mensagemRapida": "Vamos verificar sua conexão.\n\nAcesse Configurações > Conexões e verifique se o status está como Conectado.\n\nCaso esteja desconectado, clique em Reconectar e faça novamente a leitura do QR Code.",
+    "checklist": [
+      "Verificar se o celular está com internet estável",
+      "Verificar se o WhatsApp no celular está funcionando",
+      "Atualizar a página do Guimoo (F5)",
+      "Se necessário, desconectar e reconectar a instância",
+      "Testar envio de mensagem para confirmar o funcionamento"
+    ],
+    "procedimento": [
+      "Acesse Configurações > Conexões.",
+      "Verifique se a instância está com status verde: Conectado.",
+      "Se estiver desconectada, clique em Reconectar.",
+      "Leia o QR Code com o WhatsApp do celular.",
+      "Após conectar, envie uma mensagem de teste."
+    ],
+    "escalonamento": [
+      "Reconectou a instância e o erro continuou",
+      "Testou outro navegador",
+      "Limpou cache e cookies",
+      "Persistiu sem enviar mensagens"
+    ],
+    "relacionados": ["Como reconectar WhatsApp", "API Oficial: janela de 24 horas", "Número banido pelo WhatsApp"],
+    "tutorial": ""
+  },
+  {
+    "id": "SUP002",
+    "categoria": "Acesso e Conta",
+    "subcategoria": "Login",
+    "titulo": "Problemas de login ou acesso ao Hub",
+    "icone": "🔐",
+    "dificuldade": "Fácil",
+    "tempo": "3 min",
+    "versao": "1.0",
+    "atualizadoEm": "04/07/2026",
+    "tags": ["login", "senha", "acesso", "hub", "cache", "conta"],
+    "problema": "O usuário não consegue acessar a plataforma, esqueceu a senha ou a página não carrega.",
+    "mensagemRapida": "Para resolver o acesso, entre em hub.guimoo.com.br e confira se o e-mail está correto.\n\nCaso não lembre a senha, clique em Esqueci minha senha e siga o link enviado ao seu e-mail.\n\nSe ainda não funcionar, limpe o cache e teste em uma aba anônima.",
+    "checklist": ["Confirmar e-mail cadastrado", "Redefinir senha", "Verificar spam do e-mail", "Limpar cache do navegador", "Testar aba anônima", "Testar outro navegador"],
+    "procedimento": ["Acesse hub.guimoo.com.br.", "Clique em Esqueci minha senha.", "Informe o e-mail cadastrado.", "Abra o link recebido por e-mail.", "Crie a nova senha e teste o acesso."],
+    "escalonamento": ["Conta ativa e mesmo assim sem acesso", "Erro persistente após cache", "Erro ocorre em mais de um navegador"],
+    "relacionados": ["Página em branco", "Conta desativada", "Chrome deslogando"],
+    "tutorial": ""
+  },
+  {
+    "id": "SUP003",
+    "categoria": "Agentes IA",
+    "subcategoria": "Funcionamento",
+    "titulo": "IA não responde aos leads",
+    "icone": "🤖",
+    "dificuldade": "Médio",
+    "tempo": "5 min",
+    "versao": "1.0",
+    "atualizadoEm": "04/07/2026",
+    "tags": ["ia", "agente", "gatilho", "lead", "resposta", "conexão"],
+    "problema": "O agente está configurado, mas a IA não responde aos leads.",
+    "mensagemRapida": "Vamos verificar a configuração da IA.\n\nConfira se o WhatsApp está conectado, se o agente está vinculado à conexão correta e se a IA está ativa na conversa.\n\nDepois, envie #sair pelo WhatsApp para testar o fluxo do zero.",
+    "checklist": ["WhatsApp conectado", "Agente vinculado à conexão correta", "Gatilhos ativos", "IA ativa na conversa", "Horário de funcionamento válido", "Teste com #sair"],
+    "procedimento": ["Abra Configurações > Conexões e confirme o status verde.", "Vá em Agentes e confira a conexão vinculada.", "Abra a conversa e veja o status em AGENTE IA.", "Ative a IA se estiver pausada.", "Envie #sair pelo celular e faça novo teste."],
+    "escalonamento": ["Configuração correta e IA continua sem responder", "Erro reproduzido em mais de uma conversa", "Gatilho ativo sem resposta do agente"],
+    "relacionados": ["Como ativar gatilho", "Como testar fluxo", "Agente repetindo perguntas"],
+    "tutorial": ""
+  }
+]
