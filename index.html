@@ -5,19 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guimoo Support Center</title>
   <style>
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:#f5f7fb;color:#0f172a}.app{display:flex;min-height:100vh}.sidebar{width:270px;background:#071b35;color:#fff;padding:24px 18px;position:fixed;top:0;bottom:0;left:0}.logo{font-size:26px;font-weight:800;margin-bottom:30px}.menu a,.cat{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;color:#dbeafe;text-decoration:none;margin-bottom:6px;cursor:pointer}.menu a.active,.cat.active{background:#2563eb;color:white}.section-title{font-size:12px;color:#93a4bd;margin:25px 0 10px;text-transform:uppercase}.support-box{position:absolute;bottom:20px;left:18px;right:18px;background:#102a4d;border-radius:16px;padding:16px}.support-box button{margin-top:10px;width:100%;border:0;background:#2563eb;color:white;padding:10px;border-radius:10px;font-weight:700}.main{margin-left:270px;flex:1}.topbar{height:74px;background:white;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;padding:0 28px;gap:20px}.search{flex:1;max-width:760px}.search input{width:100%;padding:15px 18px;border:1px solid #dbe3ef;border-radius:14px;font-size:15px}.top-actions{margin-left:auto;display:flex;gap:20px;color:#334155;font-weight:600}.content{display:grid;grid-template-columns:1fr 330px;gap:28px;padding:26px}.breadcrumbs{font-size:14px;color:#64748b;margin-bottom:22px}.article-header{background:white;border-radius:18px;padding:28px;border:1px solid #e5e7eb}.title-row{display:flex;align-items:center;gap:18px}.icon{width:58px;height:58px;border-radius:16px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:30px}.meta{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0;color:#64748b}.badge{padding:5px 10px;border-radius:20px;background:#e0f2fe;color:#0369a1;font-size:13px}.easy{background:#dcfce7;color:#15803d}.tabs{display:flex;gap:26px;border-bottom:1px solid #e5e7eb;margin-top:24px}.tabs button{background:none;border:0;padding:16px 0;font-size:15px;color:#334155;cursor:pointer}.tabs button.active{color:#2563eb;border-bottom:3px solid #2563eb;font-weight:700}.card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:22px;margin-top:20px}.quick{background:#eff6ff;border:1px solid #bfdbfe}.copy-row{display:flex;justify-content:space-between;align-items:center}.copy-btn{background:#2563eb;color:white;border:0;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700}.checklist li{list-style:none;margin:13px 0}.checklist li:before{content:'✓';color:#16a34a;font-weight:900;margin-right:10px}.steps{counter-reset:item}.steps li{list-style:none;margin:18px 0;padding-left:45px;position:relative}.steps li:before{counter-increment:item;content:counter(item);position:absolute;left:0;top:-2px;background:#2563eb;color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}.side .card{margin-top:0;margin-bottom:18px}.tag{display:inline-block;background:#eaf2ff;color:#1d4ed8;padding:7px 10px;border-radius:20px;margin:5px;font-size:13px}.quick-action{display:block;width:100%;padding:13px;border:1px solid #e5e7eb;background:white;border-radius:12px;margin:9px 0;text-align:left}.rating button{padding:12px 14px;border-radius:10px;border:1px solid #bbf7d0;background:#f0fdf4;color:#15803d;font-weight:700;margin-right:8px}.rating button.no{border-color:#fecaca;background:#fff1f2;color:#dc2626}.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.result{cursor:pointer}.hidden{display:none}.toast{position:fixed;bottom:24px;right:24px;background:#16a34a;color:white;padding:14px 18px;border-radius:12px;display:none}.error{background:#fff1f2;border:1px solid #fecaca;color:#991b1b;border-radius:14px;padding:18px;margin:20px}@media(max-width:950px){.sidebar{position:relative;width:100%;height:auto}.app{display:block}.main{margin-left:0}.content{grid-template-columns:1fr}.topbar{height:auto;padding:18px;display:block}.top-actions{margin-top:14px}.support-box{position:relative;left:auto;right:auto;bottom:auto;margin-top:20px}}
+    *{box-sizing:border-box}
+    :root{--blue:#2563eb;--navy:#071b35;--muted:#64748b;--line:#e5e7eb;--bg:#f5f7fb;--card:#fff}
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:#0f172a}
+    .app{display:flex;min-height:100vh}
+    .sidebar{width:285px;background:var(--navy);color:#fff;padding:24px 18px;position:fixed;top:0;bottom:0;left:0;overflow:auto}
+    .logo{font-size:26px;font-weight:800;margin-bottom:26px}
+    .menu a,.cat{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:12px;color:#dbeafe;text-decoration:none;margin-bottom:6px;cursor:pointer}
+    .cat span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .count{font-size:12px;background:rgba(255,255,255,.12);padding:3px 8px;border-radius:999px}
+    .menu a.active,.cat.active{background:var(--blue);color:white}
+    .section-title{font-size:12px;color:#93a4bd;margin:25px 0 10px;text-transform:uppercase}
+    .support-box{margin-top:24px;background:#102a4d;border-radius:16px;padding:16px}
+    .support-box button{margin-top:10px;width:100%;border:0;background:var(--blue);color:white;padding:10px;border-radius:10px;font-weight:700;cursor:pointer}
+    .main{margin-left:285px;flex:1}
+    .topbar{min-height:74px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:16px 28px;gap:20px;position:sticky;top:0;z-index:10}
+    .search{flex:1;max-width:820px}.search input{width:100%;padding:15px 18px;border:1px solid #dbe3ef;border-radius:14px;font-size:15px}
+    .top-actions{margin-left:auto;display:flex;gap:20px;color:#334155;font-weight:600}
+    .content{display:grid;grid-template-columns:1fr 330px;gap:28px;padding:26px}
+    .breadcrumbs{font-size:14px;color:var(--muted);margin-bottom:22px}
+    .article-header,.card{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}
+    .article-header{padding:28px}
+    .title-row{display:flex;align-items:center;gap:18px}.icon{min-width:58px;width:58px;height:58px;border-radius:16px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:30px}
+    h1{margin:.1rem 0;font-size:28px} h2{font-size:20px} h3{margin-top:0}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0;color:var(--muted)}
+    .badge{padding:5px 10px;border-radius:20px;background:#e0f2fe;color:#0369a1;font-size:13px;display:inline-block}
+    .easy{background:#dcfce7;color:#15803d}.medium{background:#fef3c7;color:#92400e}.hard{background:#fee2e2;color:#991b1b}
+    .tabs{display:flex;gap:26px;border-bottom:1px solid var(--line);margin-top:24px;overflow:auto}.tabs button{background:none;border:0;padding:16px 0;font-size:15px;color:#334155;cursor:pointer}.tabs button.active{color:var(--blue);border-bottom:3px solid var(--blue);font-weight:700}
+    .card{margin-top:20px}.quick{background:#eff6ff;border-color:#bfdbfe}.copy-row{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .copy-btn{background:var(--blue);color:white;border:0;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700;white-space:nowrap}
+    .checklist li{list-style:none;margin:13px 0}.checklist li:before{content:'✓';color:#16a34a;font-weight:900;margin-right:10px}
+    .steps{counter-reset:item}.steps li{list-style:none;margin:18px 0;padding-left:45px;position:relative}.steps li:before{counter-increment:item;content:counter(item);position:absolute;left:0;top:-2px;background:var(--blue);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .side .card{margin-top:0;margin-bottom:18px}.tag{display:inline-block;background:#eaf2ff;color:#1d4ed8;padding:7px 10px;border-radius:20px;margin:5px;font-size:13px}
+    .quick-action{display:block;width:100%;padding:13px;border:1px solid var(--line);background:white;border-radius:12px;margin:9px 0;text-align:left;cursor:pointer}
+    .rating button{padding:12px 14px;border-radius:10px;border:1px solid #bbf7d0;background:#f0fdf4;color:#15803d;font-weight:700;margin:4px}.rating button.no{border-color:#fecaca;background:#fff1f2;color:#dc2626}
+    .results{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.result{cursor:pointer}.result:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(15,23,42,.08)}
+    .hidden{display:none}.toast{position:fixed;bottom:24px;right:24px;background:#16a34a;color:white;padding:14px 18px;border-radius:12px;display:none;z-index:99}
+    .muted{color:var(--muted)} .pre{white-space:pre-line;line-height:1.5}
+    .error{background:#fff1f2;border:1px solid #fecaca;color:#991b1b;border-radius:14px;padding:18px;margin:20px}
+    @media(max-width:950px){.sidebar{position:relative;width:100%;height:auto}.app{display:block}.main{margin-left:0}.content{grid-template-columns:1fr}.topbar{height:auto;padding:18px;display:block}.top-actions{margin-top:14px}}
   </style>
 </head>
 <body>
 <div class="app">
   <aside class="sidebar">
     <div class="logo">◖ Guimoo</div>
-    <nav class="menu"><a>⌂ Início</a><a class="active">🔎 Buscar</a><a>📚 Base de Conhecimento</a><a>💬 Mensagens rápidas</a><a>▶ Tutoriais</a><a>📋 Procedimentos</a><a>📊 Indicadores</a></nav>
+    <nav class="menu">
+      <a class="active" onclick="renderHome()">⌂ Início</a>
+      <a onclick="focusSearch()">🔎 Buscar</a>
+      <a onclick="renderHome()">📚 Base de Conhecimento</a>
+      <a onclick="renderQuickMessages()">💬 Mensagens rápidas</a>
+    </nav>
     <div class="section-title">Categorias</div><div id="categories"></div>
     <div class="support-box"><strong>Reunião de Suporte</strong><br><small>Seg a Sex • 15h</small><button>Abrir reunião</button></div>
   </aside>
   <main class="main">
-    <header class="topbar"><div class="search"><input id="searchInput" placeholder="Buscar artigos, procedimentos, tutoriais..." /></div><div class="top-actions"><span>☆ Favoritos</span><span>↺ Histórico</span><span>🔔</span></div></header>
+    <header class="topbar"><div class="search"><input id="searchInput" placeholder="Buscar artigos, procedimentos, tutoriais..." /></div><div class="top-actions"><span id="totalInfo">Carregando...</span></div></header>
     <section class="content"><div><div class="breadcrumbs" id="breadcrumbs">Carregando base...</div><div id="results" class="results hidden"></div><article id="article"></article></div><aside class="side" id="side"></aside></section>
   </main>
 </div>
@@ -25,26 +68,80 @@
 <script>
 let artigos = [];
 let atual = null;
+const $ = id => document.getElementById(id);
 
 async function carregarBase(){
-  try{
-    const resposta = await fetch('artigos_guimoo.json', {cache:'no-store'});
-    if(!resposta.ok) throw new Error('Não foi possível carregar o JSON');
-    artigos = await resposta.json();
-    if(!Array.isArray(artigos) || artigos.length === 0) throw new Error('JSON vazio');
-    renderArticle(artigos[0]);
-  }catch(e){
-    document.getElementById('breadcrumbs').textContent = 'Erro ao carregar a base';
-    document.getElementById('article').innerHTML = `<div class="error"><strong>Não consegui carregar o arquivo artigos_guimoo.json.</strong><br><br>Para testar localmente, coloque o HTML e o JSON na mesma pasta e rode um servidor local, por exemplo:<br><br><code>python -m http.server 8000</code><br><br>Depois acesse: <code>http://localhost:8000/guimoo_support_center_json.html</code></div>`;
+  const caminhos = ['data/artigos.json','artigos_guimoo.json','./data/artigos.json','./artigos_guimoo.json'];
+  for (const caminho of caminhos){
+    try{
+      const resposta = await fetch(caminho + '?v=' + Date.now(), {cache:'no-store'});
+      if(!resposta.ok) continue;
+      const dados = await resposta.json();
+      if(Array.isArray(dados) && dados.length){
+        artigos = dados;
+        $('totalInfo').textContent = artigos.length + ' artigos';
+        renderHome();
+        return;
+      }
+    }catch(e){}
   }
+  $('breadcrumbs').textContent = 'Erro ao carregar a base';
+  $('article').innerHTML = `<div class="error"><strong>Não consegui carregar o JSON.</strong><br>Confirme se existe <code>data/artigos.json</code> no repositório.</div>`;
 }
-function renderCats(){const cats=[...new Set(artigos.map(a=>a.categoria))];categories.innerHTML=cats.map(c=>`<div class="cat ${atual&&c===atual.categoria?'active':''}" onclick="filtrarCat('${c.replace(/'/g,"\\'")}')">${iconeCategoria(c)} ${c}</div>`).join('')}
-function iconeCategoria(c){if(c.includes('WhatsApp'))return '🟢'; if(c.includes('Agentes'))return '🤖'; if(c.includes('Acesso'))return '🔐'; return '📁'}
-function renderArticle(a){atual=a;breadcrumbs.textContent=`Início › ${a.categoria} › ${a.subcategoria || ''} › ${a.titulo}`;article.innerHTML=`<div class="article-header"><div class="title-row"><div class="icon">${a.icone||iconeCategoria(a.categoria)}</div><div><h1>${a.titulo}</h1><div class="meta"><span>Código: ${a.id}</span><span>• Atualizado em ${a.atualizadoEm||'-'}</span><span>• Versão ${a.versao||'1.0'}</span><span class="badge ${a.dificuldade==='Fácil'?'easy':''}">${a.dificuldade||'Padrão'}</span><span class="badge">Tempo médio: ${a.tempo||'-'}</span></div></div></div><div class="tabs"><button class="active">Visão Geral</button><button>Procedimento</button><button>Checklist</button><button>Tutorial</button><button>Escalonamento</button></div></div><div class="card"><h2>O problema</h2><p>${a.problema||''}</p></div><div class="card quick"><div class="copy-row"><strong>⚡ Mensagem rápida</strong><button class="copy-btn" onclick="copiar()">Copiar</button></div><p style="white-space:pre-line">${a.mensagemRapida||''}</p></div><div class="card"><h2>Checklist rápido</h2><ul class="checklist">${(a.checklist||[]).map(i=>`<li>${i}</li>`).join('')}</ul></div><div class="card"><h2>Procedimento detalhado</h2><ol class="steps">${(a.procedimento||[]).map(i=>`<li>${i}</li>`).join('')}</ol></div>`;side.innerHTML=`<div class="card"><h3>Tags</h3>${(a.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div><div class="card"><h3>Ações rápidas</h3><button class="quick-action" onclick="copiar()">📋 Copiar mensagem rápida</button><button class="quick-action">🎥 Abrir reunião remota</button><button class="quick-action">⚠ Reportar problema técnico</button></div><div class="card"><h3>Quando escalar</h3><p>Envie para Desenvolvimento se:</p><ul class="checklist">${(a.escalonamento||[]).map(i=>`<li>${i}</li>`).join('')}</ul></div><div class="card"><h3>Artigos relacionados</h3>${(a.relacionados||[]).map(r=>`<p>› ${r}</p>`).join('')}</div><div class="card rating"><h3>Esse procedimento te ajudou?</h3><button>👍 Sim, resolveu!</button><button class="no">👎 Não resolveu</button></div>`;renderCats();results.classList.add('hidden')}
-function copiar(){navigator.clipboard.writeText(atual.mensagemRapida||'');toast.style.display='block';setTimeout(()=>toast.style.display='none',1800)}
-function filtrarCat(c){showResults(artigos.filter(a=>a.categoria===c))}
-function showResults(lista){results.classList.remove('hidden');results.innerHTML=lista.map(a=>`<div class="card result" onclick="renderArticle(artigos.find(x=>x.id==='${a.id}'))"><strong>${a.icone||iconeCategoria(a.categoria)} ${a.titulo}</strong><p>${a.problema||''}</p><span class="badge">${a.id}</span></div>`).join('') || '<div class="card">Nenhum artigo encontrado.</div>'}
-searchInput.addEventListener('input',e=>{const q=e.target.value.toLowerCase().trim();if(!q){results.classList.add('hidden');return}showResults(artigos.filter(a=>(a.titulo+' '+a.categoria+' '+(a.subcategoria||'')+' '+(a.tags||[]).join(' ')+' '+(a.problema||'')).toLowerCase().includes(q)))})
+
+function categorias(){return [...new Set(artigos.map(a=>a.categoria))].sort();}
+function iconeCategoria(c){const a=artigos.find(x=>x.categoria===c); return a?.icone || '📁'}
+function renderCats(catAtiva=''){
+  $('categories').innerHTML = `<div class="cat ${!catAtiva?'active':''}" onclick="renderHome()"><span>📌 Todas</span><span class="count">${artigos.length}</span></div>`+
+    categorias().map(c=>`<div class="cat ${catAtiva===c?'active':''}" onclick="filtrarCat('${escapeAttr(c)}')"><span>${iconeCategoria(c)} ${c}</span><span class="count">${artigos.filter(a=>a.categoria===c).length}</span></div>`).join('');
+}
+function escapeAttr(s){return String(s).replace(/'/g,"\\'")}
+function renderHome(){
+  atual = null; renderCats('');
+  $('breadcrumbs').textContent = 'Início › Base de Conhecimento';
+  $('side').innerHTML = `<div class="card"><h3>Resumo</h3><p><strong>${artigos.length}</strong> procedimentos carregados.</p><p><strong>${categorias().length}</strong> categorias.</p></div><div class="card"><h3>Como usar</h3><p>Busque por erro, palavra-chave, categoria, pergunta ou funcionalidade.</p></div>`;
+  showResults(artigos.slice(0,60), `Exibindo os 60 primeiros de ${artigos.length} artigos. Use a busca para encontrar rapidamente.`);
+}
+function renderQuickMessages(){
+  renderCats('');
+  $('breadcrumbs').textContent = 'Mensagens rápidas';
+  showResults(artigos.filter(a=>a.mensagemRapida).slice(0,120), 'Mensagens rápidas disponíveis');
+}
+function renderArticle(a){
+  atual=a; renderCats(a.categoria); $('results').classList.add('hidden');
+  $('breadcrumbs').textContent=`Início › ${a.categoria} › ${a.subcategoria || ''} › ${a.id}`;
+  const diffClass = a.dificuldade==='Fácil'?'easy':(a.dificuldade==='Médio'?'medium':'hard');
+  $('article').innerHTML=`<div class="article-header"><div class="title-row"><div class="icon">${a.icone||iconeCategoria(a.categoria)}</div><div><h1>${a.titulo}</h1><div class="meta"><span class="badge">Código: ${a.id}</span><span class="badge ${diffClass}">${a.dificuldade||'Padrão'}</span><span class="badge">Tempo médio: ${a.tempo||'-'}</span><span class="badge">v${a.versao||'1.0'}</span><span class="badge">Atualizado em ${a.atualizadoEm||'-'}</span></div></div></div><div class="tabs"><button class="active">Visão Geral</button><button>Procedimento</button><button>Checklist</button><button>Tutorial</button><button>Escalonamento</button></div></div>
+    <div class="card"><h2>O problema</h2><p>${safe(a.problema||a.pergunta||'')}</p></div>
+    <div class="card quick"><div class="copy-row"><strong>⚡ Mensagem rápida</strong><button class="copy-btn" onclick="copiar()">Copiar</button></div><p class="pre">${safe(a.mensagemRapida||'')}</p></div>
+    <div class="card"><h2>Checklist rápido</h2><ul class="checklist">${(a.checklist||[]).map(i=>`<li>${safe(i)}</li>`).join('') || '<li>Validar o caso conforme procedimento.</li>'}</ul></div>
+    <div class="card"><h2>Procedimento detalhado</h2><ol class="steps">${(a.procedimento||[]).map(i=>`<li>${safe(i)}</li>`).join('') || `<li>${safe(a.respostaCompleta||'')}</li>`}</ol></div>
+    <div class="card"><h2>Resposta completa</h2><p class="pre">${safe(a.respostaCompleta||a.mensagemRapida||'')}</p></div>`;
+  $('side').innerHTML=`<div class="card"><h3>Tags</h3>${(a.tags||[]).map(t=>`<span class="tag">${safe(t)}</span>`).join('')}</div>
+    <div class="card"><h3>Ações rápidas</h3><button class="quick-action" onclick="copiar()">📋 Copiar mensagem rápida</button><button class="quick-action">🎥 Abrir tutorial</button><button class="quick-action">📞 Abrir reunião</button><button class="quick-action">🚨 Escalonar</button></div>
+    <div class="card"><h3>Quando escalar</h3><ul class="checklist">${(a.escalonamento||[]).map(i=>`<li>${safe(i)}</li>`).join('')}</ul></div>
+    <div class="card rating"><h3>Esse procedimento te ajudou?</h3><button>👍 Sim</button><button class="no">👎 Não</button></div>`;
+}
+function showResults(lista, label='Resultados encontrados'){
+  $('article').innerHTML='';
+  $('results').classList.remove('hidden');
+  $('breadcrumbs').textContent = label + ` (${lista.length})`;
+  $('results').innerHTML = lista.map(a=>`<div class="card result" onclick="renderArticleById('${a.id}')"><strong>${a.icone||iconeCategoria(a.categoria)} ${safe(a.titulo)}</strong><p class="muted">${safe(a.problema||'')}</p><span class="badge">${a.id}</span> <span class="badge">${safe(a.categoria)}</span></div>`).join('') || '<div class="card">Nenhum artigo encontrado.</div>';
+}
+function renderArticleById(id){const a=artigos.find(x=>x.id===id); if(a) renderArticle(a)}
+function filtrarCat(c){renderCats(c); showResults(artigos.filter(a=>a.categoria===c), c)}
+function copiar(){navigator.clipboard.writeText(atual?.mensagemRapida||''); $('toast').style.display='block'; setTimeout(()=>$('toast').style.display='none',1800)}
+function focusSearch(){searchInput.focus()}
+function safe(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+searchInput.addEventListener('input',e=>{
+  const q=e.target.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+  if(!q){renderHome();return}
+  const lista=artigos.filter(a=>{
+    const txt=[a.id,a.titulo,a.pergunta,a.categoria,a.subcategoria,a.problema,a.mensagemRapida,a.respostaCompleta,(a.tags||[]).join(' ')].join(' ').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    return txt.includes(q);
+  });
+  renderCats(''); showResults(lista, 'Busca: '+e.target.value);
+});
 carregarBase();
 </script>
 </body>
