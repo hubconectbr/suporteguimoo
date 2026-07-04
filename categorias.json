@@ -1,0 +1,67 @@
+[
+  {
+    "categoria": "Acesso e Conta",
+    "icone": "🔐",
+    "total": 129
+  },
+  {
+    "categoria": "Agenda",
+    "icone": "📅",
+    "total": 31
+  },
+  {
+    "categoria": "Agentes IA",
+    "icone": "🤖",
+    "total": 267
+  },
+  {
+    "categoria": "Aplicativo Mobile",
+    "icone": "📱",
+    "total": 29
+  },
+  {
+    "categoria": "CRM",
+    "icone": "📊",
+    "total": 63
+  },
+  {
+    "categoria": "Financeiro e Plano",
+    "icone": "💳",
+    "total": 26
+  },
+  {
+    "categoria": "Geral",
+    "icone": "📁",
+    "total": 12
+  },
+  {
+    "categoria": "Guimoo Sign",
+    "icone": "✍️",
+    "total": 25
+  },
+  {
+    "categoria": "Integrações",
+    "icone": "🔗",
+    "total": 11
+  },
+  {
+    "categoria": "Jurídico / Fora de Escopo",
+    "icone": "⚖️",
+    "total": 1
+  },
+  {
+    "categoria": "Sistema e Navegador",
+    "icone": "🖥️",
+    "total": 54
+  },
+  {
+    "categoria": "Tutoriais e Treinamento",
+    "icone": "🎓",
+    "total": 25
+  },
+  {
+    "categoria": "WhatsApp",
+    "icone": "🟢",
+    "total": 98
+  }
+]
