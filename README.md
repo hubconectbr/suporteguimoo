@@ -1,35 +1,19 @@
-# Guimoo Support Search v4
+# Guimoo Support Search v5 — Busca Inteligente
 
-Versão com tela inicial realmente no estilo Google.
+Correções e melhorias:
 
-## Conceito
+- Botão "Pesquisa Guimoo" agora executa a busca.
+- Tecla Enter agora executa a busca.
+- Busca com normalização de acentos.
+- Remoção de palavras pouco úteis.
+- Dicionário de sinônimos.
+- Ranking por relevância.
+- Exemplo: "WhatsApp caiu" encontra artigos de WhatsApp desconectado, conexão, instância e envio de mensagens.
 
-A página inicial fica limpa, com apenas:
-
-- guimoo
-- campo de busca central
-- sugestões rápidas
-- botões de pesquisa
-
-O restante fica "atrás". Só aparece quando o usuário seleciona uma mensagem/procedimento.
-
-## Arquivos
+Para atualizar no GitHub, substitua principalmente:
 
 ```txt
-index.html
-css/style.css
 js/app.js
-data/artigos.json
-data/categorias.json
 ```
 
-## Base
-
-- 771 artigos
-- 13 categorias
-
-## Publicação
-
-Suba todos os arquivos para o GitHub Pages no repositório:
-
-hubconectbr/suporteguimoo
+Se quiser garantir a versão completa, envie todo o pacote.
